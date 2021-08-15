@@ -4,13 +4,12 @@ import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import ButtonLink from './ButtonLink';
 import CustomButton from './CustomButton';
 
-export default function App() {
+export default function HomeScreen({navigation}) {
   return (
-    <NavigationContainer>
-
       <View style={styles.container}>
         <View style={styles.header}>
           <Text>COVID MAP</Text>
+          <CustomButton title='map' link='map' navigation={navigation}/>
         </View>
         <View>
           <Text>here is where some text goes</Text>
@@ -21,7 +20,6 @@ export default function App() {
         </View>
         <ExpoStatusBar style="auto" />
       </View>
-    </NavigationContainer>
   );
 }
 

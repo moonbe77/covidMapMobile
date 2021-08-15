@@ -4,10 +4,11 @@ import { StyleSheet, Text, View, Pressable } from 'react-native';
 function CustomButton(props) {
   const [timesPressed, setTimesPressed] = useState(0)
   const [state, setState] = useState('waiting')
-  const { title } = props;
+  const { title, link, navigation } = props;
+
 
   const handlePress = () => {
-    console.log('pressed')
+    navigation.navigate(link)
   }
 
   return (
