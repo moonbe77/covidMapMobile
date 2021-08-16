@@ -16,7 +16,7 @@ export default function App() {
           component={HomeScreen}
           // options={{ title: 'Welcome' }}
         />
-        <Stack.Screen name="map" component={Map} />
+        <Stack.Screen name="Map" component={Map} />
       </Stack.Navigator>
     </NavigationContainer>
   );

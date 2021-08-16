@@ -9,7 +9,7 @@ export default function HomeScreen({navigation}) {
       <View style={styles.container}>
         <View style={styles.header}>
           <Text>COVID MAP</Text>
-          <CustomButton title='map' link='map' navigation={navigation}/>
+          <CustomButton title='MAP' screen='Map' navigation={navigation}/>
         </View>
         <View>
           <Text>here is where some text goes</Text>
