@@ -3,7 +3,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import HomeScreen from './components/HomeScreen'
-import Map from './components/Map'
+import MapScreen from './components/MapScreen'
 
 const Stack = createStackNavigator();
 
@@ -16,7 +16,7 @@ export default function App() {
           component={HomeScreen}
           // options={{ title: 'Welcome' }}
         />
-        <Stack.Screen name="Map" component={Map} />
+        <Stack.Screen name="Map" component={MapScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

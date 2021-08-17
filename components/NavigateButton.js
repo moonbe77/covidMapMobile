@@ -1,31 +1,34 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
 
-function CustomButton(props) {
+function NavigateButton(props) {
   const [timesPressed, setTimesPressed] = useState(0)
   const [state, setState] = useState('waiting')
-  const { title, onPress, screen } = props;
+  const { title, screen, navigation } = props;
 
+  const handlePress = () => {
+    navigation.navigate(screen)
+  }
 
   return (
     <View style={styles.container}>
       <Pressable
         style={styles.button}
-        onPress={onPress(screen)}
-        onPressIn={()=>{setState('pressed In')}}
-        onPressOut={()=>{setState('pressed Out')}}
-        onLongPress={()=>{setState('long press')}}
+        onPress={handlePress}
+        onPressIn={() => { setState('pressed In') }}
+        onPressOut={() => { setState('pressed Out') }}
+        onLongPress={() => { setState('long press') }}
         android_disableSound={true}
         pressRetentionOffset={{ bottom: 0, left: 0, right: 0, top: 0 }}
-        android_ripple={{color: '#404040'}}
+        android_ripple={{ color: '#404040' }}
       >
         <Text>{title}</Text>
-      </Pressable>      
+      </Pressable>
     </View>
   );
 }
 
-export default CustomButton;
+export default NavigateButton;
 
 
 const styles = StyleSheet.create({

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native'
 
-function Map(props) {
+function MapScreen(props) {
   return (
     <View>
       <Text> MAP SCREEN</Text>      
@@ -9,5 +9,5 @@ function Map(props) {
   );
 }
 
-export default Map;
+export default MapScreen;
 
