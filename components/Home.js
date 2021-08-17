@@ -1,28 +1,29 @@
-import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
-import ButtonLink from './ButtonLink';
-import  NavigateButton from './NavigateButton';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import ButtonLink from '../components/ButtonLink';
 
-export default function HomeScreen({ navigation }) {
-
+const Home = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text>COVID MAP</Text>
-        <NavigateButton title='MAP' screen='Map' navigation={navigation} />
+        {/* <NavigateButton title='MAP' screen='Map' navigation={navigation} /> */}
       </View>
       <View>
         <Text>here is where some text goes</Text>
         <ButtonLink
           title="Press Me"
         />
-        <NavigateButton title="press me!"  screen='Home' navigation={navigation}/>
+        {/* <NavigateButton title="press me!" screen='Home' navigation={navigation} /> */}
       </View>
       <ExpoStatusBar style="auto" />
     </View>
-  );
+  )
 }
+
+export default Home;
+
 
 const styles = StyleSheet.create({
   container: {
